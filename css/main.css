@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* thanh dieu huong */
+.flex{
+    display: flex;
+}
+
+ul.menu {
+    list-style-type:none;
+    background-color: lightblue;
+    text-align: center;
+}
+ul.menu li{
+    
+}
+ul.menu :last-child{
+    margin-left: auto;
+}
+ul.menu li a{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    border-left: 1px solid white;
+}
+ul.menu li a:hover{
+    color: red;
+    background-color: yellow;
+}
+/* header */
+img{
+    width: 100%;
+}
+header img{
+    width: 20%;
+}
+header{
+    background-color:lightblue ;
+    height: 120px;
+    border-top: 1px solid black;
+}
+header>div{
+    text-align: center;
+    margin: 30px;
+}
+/* menu con */
+ul.menu li  .sub{
+    display: none;
+    position: absolute;
+}
+ul.menu li{
+    position: relative;
+}
+ul.menu li:hover .sub{
+    display: block;
+    color: red;
+    background-color: lightblue;
+}
+ul.menu li ul.sub{
+    list-style-type: none;
+}
+
+
