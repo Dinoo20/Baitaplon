@@ -1,7 +1,19 @@
 *{
     padding: 0;
     margin: 0;
+    color: orangered;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/*  */
+div h3,div h4 {
+    color: black;
+    line-height: auto;
+}
+.fa-solid {
+    color: black;
+    list-style: none;
+    display: flex;
 }
 /* thanh dieu huong */
 .flex{
@@ -13,9 +25,7 @@ ul.menu {
     background-color: lightblue;
     text-align: center;
 }
-ul.menu li{
-    
-}
+
 ul.menu :last-child{
     margin-left: auto;
 }
@@ -32,34 +42,67 @@ ul.menu li a:hover{
 /* header */
 img{
     width: 100%;
+    display: block;
 }
 header img{
     width: 20%;
 }
 header{
+    
     background-color:lightblue ;
     height: 120px;
     border-top: 1px solid black;
+    padding: 20px;
 }
 header>div{
     text-align: center;
     margin: 30px;
 }
 /* menu con */
-ul.menu li  .sub{
-    display: none;
-    position: absolute;
-}
-ul.menu li{
-    position: relative;
-}
-ul.menu li:hover .sub{
+.menu ul {
+    list-style: none; /* Loại bỏ dấu chấm đầu dòng */
+    padding: 0;
+    margin: 0;
+  }
+  .menu li {
+    position: relative; /* Để menu con có thể định vị tuyệt đối so với mục cha */
+  }
+  .menu li a {
     display: block;
-    color: red;
-    background-color: lightblue;
-}
-ul.menu li ul.sub{
-    list-style-type: none;
-}
-
-
+    padding: 10px;
+    text-decoration: none;
+    
+  }
+  .menu .sub {
+    display: none; /* Ẩn menu con mặc định */
+    position: absolute;
+    background-color: white;
+    border: 1px solid red;
+    width: 200px; /* Điều chỉnh chiều rộng theo ý muốn */
+    z-index: 1;
+  }
+  .menu li:hover .sub {
+    display: block;
+  }
+  .menu .sub ul {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+/* Main */
+main {
+    flex: 1;
+    padding: 20px;
+    
+  }
+/* footer */
+footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Chia thành 2 cột bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các cột */
+  }
+  
+  footer .copyright {
+    grid-column: 1 / span 2; /* Cho phần bản quyền chiếm cả 2 cột */
+    text-align: center;
+  }
